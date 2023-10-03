@@ -2,6 +2,7 @@ import Marquee from "react-fast-marquee";
 
 export default function Highlights() {
 	return <Marquee 
+		autoFill={ true }
 		pauseOnHover={ true }
 		speed={ 100 }
 	>
