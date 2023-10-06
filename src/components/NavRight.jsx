@@ -6,12 +6,14 @@ import qZone1 from "../assets/qZone1.png";
 import qZone2 from "../assets/qZone2.png";
 import qZone3 from "../assets/qZone3.png";
 import advBg from "../assets/bg.png";
+import useAuth from "./useAuth";
 
 export default function NavRight() {
+	const { googleSignIn, githubSignIn } = useAuth();
 	return <div>
 		<h2 className="text-xl font-semibold">Login With</h2>
 		<div className="mt-6 space-y-2">
-			<button className="flex items-center justify-center w-full py-2 text-blue-500 border border-blue-500 rounded-lg hover:text-white hover:bg-blue-500 gap-2">
+			<button onClick={ googleSignIn } className="flex items-center justify-center w-full py-2 text-blue-500 border border-blue-500 rounded-lg hover:text-white hover:bg-blue-500 gap-2">
 				<div>
 					<FaGoogle className="block"/>
 				</div>
@@ -19,7 +21,7 @@ export default function NavRight() {
 					<p className="">Login with Google</p>
 				</div>
 			</button>
-			<button className="flex items-center justify-center w-full py-2 border border-black rounded-lg hover:text-white hover:bg-black gap-2 ">
+			<button onClick={ githubSignIn } className="flex items-center justify-center w-full py-2 border border-black rounded-lg hover:text-white hover:bg-black gap-2 ">
 				<div>
 					<FaGithub className="block"/>
 				</div>
